@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>GitHub User Search</title>
+</head>
+<body>
+    <header>
+        <h1>DevFinder</h1>
+    </header>
+    <main>
+        <form id="search-form">
+            <div class="wrapper">
+                <img src="img/search-outline.svg" alt="search-icon">
+                <input id="search" type="search" name="username" placeholder="Search Github">
+            </div>
+            <button id="submit">Search</button>
+        </form>
+        <div class="user-profile">
+            <div class="profile-header">
+                <img id="profile-picture" src="img/profile.png" alt="profile-picture">
+                <h2 id="profile-name">Krule</h2>
+                <div id="profile-nickname">@kruleDev</div>
+                <div id="join-date">Joined 30 Dec 2020</div>
+                <p id="profile-bio">
+                    This user has no bio
+                </p>
+            </div>
+
+            <div class="profile-stats">
+                <div id="repositories">
+                    <h3>Repos</h3>
+                    <p id="nbr-repos">8</p>
+                </div>
+                <div id="followers">
+                    <h3>followers</h3>
+                    <p id="nbr-followers">0</p>
+                </div>
+                <div id="following">
+                    <h3>Following</h3>
+                    <p id="nbr-following">502</p>
+                </div>
+
+            </div>
+            <div class="profile-info">
+                <div class="location">
+                    <img src="img/home-outline.svg" alt="location-icon">
+                    <p id="user-location">Not available</p>
+                </div>
+                <div class="blog">
+                    <img src="img/link-2-outline.svg" alt="location-icon">
+                    <p id="website">Not available</p>
+                </div>
+                <div class="twitter">
+                    <img src="img/twitter-outline.svg" alt="location-icon">
+                    <p id="user-twitter">Not available</p>
+                </div>
+                <div class="compagny">
+                    <img src="img/briefcase-outline.svg" alt="location-icon">
+                    <p id="user-workplace">Not available</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+<script src="app.js"></script>
+</html>

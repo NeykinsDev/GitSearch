@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#111829 ;
+    color: blanchedalmond;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    min-height: 100vh;
+   
+}
+header{
+    padding-bottom: 10px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#1E2A47;
+    border-radius: 10px;
+    width:350px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+#search-form img{
+    height: 40px;
+    filter:#916BBF;
+}
+#search{
+    border: none;
+    padding:20px 20px;
+    border-radius: 10px;
+    width: 180px;
+    font-family: 'Space Mono', monospace;
+    background-color:#1E2A47;
+    color:blanchedalmond;
+    outline:none;
+    font-size: 14px;
+}
+#submit{
+    border:none;
+    border-radius: 10px;
+    font-family: 'Space Mono', monospace;
+    padding:10px 20px ;
+    background-color: #916BBF;
+    color:blanchedalmond;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color:#a788cb ;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.user-profile{
+    display:flex;
+    flex-direction: column;
+    background-color: #1E2A47;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile-header{
+    display: grid;
+    grid-template-columns: 70px 180px;
+    grid-template-rows: 1fr 1fr 2fr 3fr;
+    /*grid-template-rows: 30px 20px 50px 50px;*/
+    grid-template-areas: 
+    "picture name "
+    "picture nickname"
+    "picture date "
+    " bio bio";
+    column-gap:20px;
+    padding: 20px;
+    align-items: center;
+
+}
+#profile-picture{
+    grid-area: picture;
+    border-radius: 50%;
+    width: 70px;
+}
+#profile-name{
+    grid-area: name ;
+    font-size: 16px;
+}
+#profile-nickname{
+    grid-area: nickname ;
+    font-size: 12px;
+    color: #916BBF;
+}
+#join-date{
+    grid-area: date ;
+
+}
+#profile-bio{
+    grid-area: bio ;
+
+}
+
+.profile-stats{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color:#111829 ;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.profile-stats h3{
+    font-size: 14px;
+    font-weight: 400;
+}
+.profile-stats p{
+    margin: 10px;
+    font-size: 14px;
+}
+.profile-info{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "location"
+    "blog"
+    "twitter"
+    "compagny";
+    margin:20px;
+}
+.profile-info div{
+    margin: 10px;
+}
+.location{
+    grid-area: location;
+}
+.blog{
+    grid-area: blog;
+}
+.twitter{
+    grid-area: twitter;
+}
+.compagny{
+    grid-area: compagny;
+}
+.location, .blog, .twitter, .compagny{
+    display: flex;
+    align-items: center;
+
+}
+.location img, .blog img, .twitter img ,.compagny img{
+    width: 30px;
+    margin: 0 10px;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    header{
+        padding: 20px 0;
+    }
+    h1{
+        font-size: 32px;
+    }
+
+    #search-form, .user-profile{
+        width: 650px;
+    }
+    #search{
+        width: 300px;
+    }
+    #profile-picture{
+        width: 140px;
+        justify-self: center;
+    }
+    #profile-name{
+        font-size: 24px;
+    }
+    #profile-nickname,#join-date,#profile-bio{
+        font-size: 16px;
+    }
+    .profile-stats p{
+        font-size: 24px;
+    }
+
+   
+    .profile-header{
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .profile-info{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas: 
+        "location blog"
+        "twitter compagny";
+    }
+
+    .location, .blog, .twitter, .compagny{
+       font-size: 16px;
+    
+    }
+    .profile-stats h3{
+        font-size: 16px;
+
+    }
+    #search  {
+        font-size: 18px;
+    }
+    #submit{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1081px) {
+    #search-form, .user-profile{
+        width: 850px;
+    }
+ 
+    
+    .profile-header{
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "picture name date"
+        "picture nickname ."
+        "picture bio bio";
+
+    }
+    .user-profile{
+        display: grid;
+        grid-template-columns: 200px 2fr;
+        grid-template-rows: 200px 120px 140px;
+        grid-template-areas: 
+        "header header"
+        ". stats"
+        ". infos";
+    }
+    .profile-header{
+        grid-area: header;
+        padding: 0;
+        column-gap:0;
+    }
+    .profile-stats{
+        grid-area: stats;
+    }
+    .profile-info{
+        grid-area: infos;
+        margin: 0;
+    }
+}
